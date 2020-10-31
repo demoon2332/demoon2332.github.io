@@ -1,0 +1,9 @@
+#time {
+	text-align: center;
+	position: center;
+	font-family: 'Pacifico';
+	font-style: italic;
+	font-size: 2em;
+	color:rgb(253, 25, 56);
+	border-radius: 5px;
+}

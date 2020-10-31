@@ -1,0 +1,351 @@
+.content{
+	color:  #8A2BE2;
+	position: center;
+}
+header h2{
+	font-family: 'Pacifico';
+	font-size: 75px;
+	text-align:  center;
+	text-shadow: 0 0 6px #fff;
+	opacity: 2;
+}
+*{
+	margin: 0;
+	padding:0;
+}
+.slides{
+	width: 100%;
+	height: 700px;
+	overflow: scroll;
+	
+}
+.slide{
+	left: 25px;
+	width: 1005;
+	height:  700px;
+	position: absolute;
+	visibility: hidden;
+	opacity: 0;
+	text-align: center;
+	width: 1215px;
+	height: 356px;
+	border-style: solid;
+	border-width: 3px;
+	border-color: lightseagreen;
+}
+.slide.active{
+	opacity: 1;
+	visibility: visible;
+}
+.sky {
+	background: linear-gradient(to top, hsl(187, 87%, 59%) 0%, #fd83f3 100%);
+	width: 100%;
+	height: 100vh;
+}
+.correct{
+	background-image: url(../img/star_correct.png) !important;
+}
+.incorrect:hover{
+	background-image: url(../img/star_incorrect.png) !important;
+}
+.star {
+	z-index: 1;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+/* 
+	star --> correct --> li --> blue,red star
+*/
+.correct li {
+	animation: animate 5s linear infinite;
+	background-image: url(../img/star.png);
+	background-position: center;
+	background-size: 100%;
+	position: absolute;
+	display: block;
+	left: 5%;
+	width: 100px;
+	height: 100px;
+	list-style: none;
+	overflow: hidden;	
+	/*
+	background: rgba(255, 255, 255, 0.2); --> make a box  
+	*/
+
+	bottom: -150px;
+	animation-delay: 1.5s;
+/* 
+	star --> correct --> li --> blue,red star
+*/
+}
+/*
+	list of correct star : 
+*/
+.correct li:nth-child(1){
+	background-image: url(../img/star.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100%;
+	left: 90%;
+	width: 70px;
+	height: 70px;
+	animation-delay: 2s;
+	
+}
+.correct li:nth-child(1){
+	background-image: url(../img/star.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100%;
+	left: 67%;
+	width: 100px;
+	height: 100px;
+	animation-delay: 2s;
+	
+}
+.correct li:nth-child(2){
+	background-image: url(../img/star.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100%;
+	left: 55%;
+	width: 70px;
+	height: 70px;
+	animation-delay: 1s;
+}
+.correct li:nth-child(3){
+	background-image: url(../img/star.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100%;
+	left: 22%;
+	width: 65px;
+	height: 650px;
+	animation-delay: 0s;
+}
+.correct li:nth-child(4){
+	background-image: url(../img/star.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100%;
+	left: 32%;
+	width: 50px;
+	height: 50px;
+	animation-delay: 2s;
+	opacity: 0;
+}
+.correct li:nth-child(5){
+	background-image: url(../img/star.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100%;
+	left: 77%;
+	width: 50px;
+	height: 50px;
+	animation-delay: 2s;
+	opacity: 0;
+}
+.correct li:nth-child(6){
+	background-image: url(../img/star.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100%;
+	left: 16%;
+	width: 50px;
+	height: 50px;
+	animation-delay: 2.5s;
+	opacity: 0;
+}
+.correct li:nth-child(7){
+	background-image: url(../img/star.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100%;
+	left: 7%;
+	width: 45px;
+	height: 45px;
+	animation-delay: 0.5s;
+	opacity: 0;
+}
+/* 
+	star --> correct --> li --> black star
+*/
+.incorrect li {
+	animation: animate 5s linear infinite;
+	background-image: url(../img/star.png);
+	background-position: center;
+	background-size: 100%;
+	position: absolute;
+	display: block;
+	left: 55%;
+	width: 100px;
+	height: 100px;
+	list-style: none;
+	overflow: hidden;	
+	/*
+	background: rgba(255, 255, 255, 0.2); --> make a box  
+	*/
+
+	bottom: -150px;
+	animation-delay: 1.5s;
+}
+.incorrect li:nth-child(1){
+	background-image: url(../img/star.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100%;
+	left: 85%;
+	width: 100px;
+	height: 100px;
+	animation-delay: 2s;
+}
+.incorrect li:nth-child(2){
+	background-image: url(../img/star.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100%;
+	left: 97%;
+	width: 70px;
+	height: 70px;
+	animation-delay: 1s;
+}
+.incorrect li:nth-child(3){
+	background-image: url(../img/star.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100%;
+	left: 20%;
+	width: 62px;
+	height: 650px;
+	animation-delay: 0s;
+}
+.incorrect li:nth-child(4){
+	background-image: url(../img/star.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100%;
+	left: 73%;
+	width: 50px;
+	height: 50px;
+	animation-delay: 2s;
+	opacity: 0;
+}
+.incorrect li:nth-child(5){
+	background-image: url(../img/star.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100%;
+	left: 47%;
+	width: 50px;
+	height: 50px;
+	animation-delay: 2s;
+	opacity: 0;
+}
+.incorrect li:nth-child(6){
+	background-image: url(../img/star.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100%;
+	left: 39%;
+	width: 50px;
+	height: 50px;
+	animation-delay: 2.5s;
+	opacity: 0;
+}
+.incorrect li:nth-child(7){
+	background-image: url(../img/star.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100%;
+	left: 4%;
+	width: 45px;
+	height: 45px;
+	animation-delay: 0.5s;
+	opacity: 0;
+}
+li button{
+	width: 120px !important ;  
+	height: 120px !important ;
+	position : center;
+	overflow: hidden;
+	opacity: 0;
+}
+.star li:hover{
+	animation-play-state: paused;
+	cursor: pointer;
+	background-image: inherit !important;
+	transition : 1s;
+}
+.star li:after{
+	animation-play-state: running;
+}
+.active {
+	background-image: url(../img/heart.png) !important;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100%;
+	left: 90%;
+	width: 70px;
+	height: 70px;
+	animation-delay: 2s;
+}
+@keyframes animate {
+	0% {
+		transform: translateY(0) rotate(0deg);
+		opacity: 1;
+	}
+	100% {
+		transform: translateY(-800px) rotate(360deg);
+		opacity: 0;
+	}
+}
+@keyframes spin {
+	from {
+		transform: rotate(0deg);
+	  }
+	  to {
+		transform: rotate(360deg);
+	  }
+}
+.start button{
+	font-family: 'Pacifico';
+	text-align: center;
+	position: absolute;
+	z-index: 3;
+}
+#go{
+	
+	left: 42%;
+	width: 122px;
+	height: 75px;
+	border-width: 5px;
+	border-color: palevioletred;
+	color: red;
+	font-size: 22px;
+}
+#goodbye{
+	left: 52%;
+	width: 122px;
+	height: 75px;
+	border-width: 5px;
+	border-color: palevioletred; 
+	color: #FF3333;
+	font-size: 23px;
+}
+
+button:hover{
+	background-color: #FFFF33;	
+	transition: 0.2s;
+	cursor: pointer;
+	font-size: 25px;
+}
+.swal_size {
+	font-family: fantasy;
+	width: 647px;
+	height: 400px;
+}
+
