@@ -3,7 +3,6 @@
 	position: center;
 	font-family: 'Pacifico';
 	font-style: italic;
-	font-size: 2em;
+	font-size: 150%;
 	color:rgb(253, 25, 56);
-	border-radius: 5px;
 }
