@@ -1,10 +1,11 @@
 .content{
 	color:  #8A2BE2;
 	position: center;
+	
 }
 header h2{
 	font-family: 'Pacifico';
-	font-size: 75px;
+	font-size: 65px;	
 	text-align:  center;
 	text-shadow: 0 0 6px #fff;
 	opacity: 2;
@@ -13,30 +14,7 @@ header h2{
 	margin: 0;
 	padding:0;
 }
-.slides{
-	width: 100%;
-	height: 700px;
-	overflow: scroll;
-	
-}
-.slide{
-	left: 25px;
-	width: 1005;
-	height:  700px;
-	position: absolute;
-	visibility: hidden;
-	opacity: 0;
-	text-align: center;
-	width: 1215px;
-	height: 356px;
-	border-style: solid;
-	border-width: 3px;
-	border-color: lightseagreen;
-}
-.slide.active{
-	opacity: 1;
-	visibility: visible;
-}
+
 .sky {
 	background: linear-gradient(to top, hsl(187, 87%, 59%) 0%, #fd83f3 100%);
 	width: 100%;
@@ -318,34 +296,41 @@ li button{
 	z-index: 3;
 }
 #go{
-	
-	left: 42%;
-	width: 122px;
-	height: 75px;
+	bottom: 10%;
+	left: 35%;
+	width: 10%;
+	height: 10%;
 	border-width: 5px;
 	border-color: palevioletred;
 	color: red;
 	font-size: 22px;
 }
 #goodbye{
+	bottom: 10%;
 	left: 52%;
-	width: 122px;
-	height: 75px;
+	width: 10%;
+	height: 10% ;
 	border-width: 5px;
 	border-color: palevioletred; 
 	color: #FF3333;
-	font-size: 23px;
+	font-size: 23px;	
 }
-
 button:hover{
 	background-color: #FFFF33;	
 	transition: 0.2s;
 	cursor: pointer;
-	font-size: 25px;
+	-webkit-transform: scale(1.2);
 }
 .swal_size {
 	font-family: fantasy;
 	width: 647px;
 	height: 400px;
+}
+.footer{
+	position: fixed;
+	bottom: 3%;
+	display: flex;
+	right: 0;
+	align-items: center;
 }
 
