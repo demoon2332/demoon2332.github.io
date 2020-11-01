@@ -1,4 +1,9 @@
+hello();
+
 $ = jQuery.noConflict();
+setTimeout(function(){
+  $('#goodbye').click();
+},330000);  //5p30s
 var count = 0
 function getWish(count){
 if(count == 1)
@@ -10,17 +15,17 @@ if(count == 3)
 if(count == 4)
   return '<span style="color:black ;font-family: Sofia ;font-size:35px ; ">Mong sự nghiệp giảng dạy ngày càng thành công và có thêm nhiều kỉ niệm vui buồn cùng với mái trường , đồng nghiệp và cùng các em học sinh,sinh viên.</span>'
 if(count == 5)
-  return '<span style="color:black ;font-family: Sofia ;font-size:35px ; ">Chúc thầy cô ngày càng có thêm nhiều kinh nghiệm cũng như kiến thức mới lạ đề truyền đạt , giảng dạy cho các thế hệ sinh viên sau.</span>'
+  return '<span style="color:black ;font-family: Sofia ;font-size:35px ; ">Chúc thầy cô ngày càng có thêm nhiều kinh nghiệm cũng như kiến thức mới mẻ,quý báu đề truyền đạt , giảng dạy cho các thế hệ sinh viên sau.</span>'
 if(count == 6)
   return '<span style="color:black ;font-family: Sofia ;font-size:35px ; ">Mong rằng tóc thầy , cô đừng vội bạc đi theo năm tháng để dạy chúng em được nhiều điều hay lẽ phải hơn.</span> '
-if(count ==7)
+if(count == 7)
   return '<span style="color:black ;font-family: Sofia ;font-size:35px ; ">Gửi các thầy cô kính yêu , thầy cô luôn là người lái đò cần mẫn dìu dắt chúng em mỗi ngày và người truyền lửa cho các sinh viên trẻ như chúng em sau này có hành trang thật tốt để bước đời <3.</span>'
 }
 function begin_catch(){
 ///////////////////
 $(document).ready(function() {
   Swal.fire({
-    title: '<span style="color:#333333 ; font-family: Pacifico ; font-size:50px "> ~ Catch Wish Stars ~ <span><img src="./img/rule1.png" width= 500px height= 500px></img> \n<img src="./img/rule2.png" width= 500px height= 300px></img> ',
+    title: '<span style="color:#333333 ; font-family: Pacifico ; font-size:50px "> ~ Catch Wish Stars ~\n<u style="font-size:40px;color:#003399">* Rules : </u><span><img src="./img/rule1.png" width= 500px height= 500px></img> \n<img src="./img/rule2.png" width= 500px height= 300px></img> ',
     text : '',
     imageUrl: './img/star.png',
     imageWidth: '100px',
@@ -33,18 +38,26 @@ $(document).ready(function() {
     background: '#FF9966',
     backdrop: `
     rgba(0,0,123,0.4)
-    url("./img/rainbow_cat.gif")
-    left top
+    url("./img/cute2.gif")
+    right top
     no-repeat
+    imageWidth: 
     `
   }).then((result) => {
     if(result.isDenied)  {
       //Swal.fire('Saved!', '', 'success')
       Swal.fire({
-        title: '<span style="color:#333333 ; font-family: Pacifico ; font-size:50px ">Stars are automatically catched !',
-        timer: '1500',
+        title: '<span style="color:#FF9933 ; font-family: Pacifico ; font-size:50px ">Sao sẽ được bắt tự động !',
+        timer: '3500',
+        background:'#222222',
+        backdrop: `
+      rgba(0,0,123,0.4)
+      url("./img/rainbow_cat.gif")
+      left top
+      no-repeat
+      `
       });
-      setTimeout(auto,1200);
+      setTimeout(auto,3500);
     }
   });
 
@@ -86,7 +99,8 @@ $('.correct li:nth-child(2)').click(function(){
         title: ""+getWish(count),
         text : "stars :"+count + "/ " + 7,
         timer : '8000',
-        background:'url(img/dreamcatcher.jpg)'
+        background:'url(img/dreamcatcher.jpg)',
+        backdrop: 'url(img/cutestar.gif)',
       })
       arr[1]=true;
     }
@@ -103,7 +117,8 @@ $('.correct li:nth-child(3)').click(function(){
         title: ""+getWish(count),
         text :"stars :"+ count + "/ " + 7,
         timer : '9000',
-        background: 'url(img/s2.jpg)'
+        background: 'url(img/s2.jpg)',
+        backdrop :'url(img/rise.gif)',
       })
       arr[2]=true;
     }
@@ -120,6 +135,8 @@ $('.correct li:nth-child(4)').click(function(){
         title: ""+getWish(count),
         text : "stars :"+count + "/ " + 7,
         timer : '9000',
+        background: 'url(./img/skygate.png)',
+        backdrop: 'url(img/daynight.gif)',
       })
       arr[3]=true;
     }
@@ -136,6 +153,8 @@ $('.correct li:nth-child(5)').click(function(){
       title: ""+getWish(count),
       text : "stars :"+count + "/ " + 7,
       timer : '9000',
+      background: 'url(./img/s4.jpg)',
+      backdrop: 'url(img/falling.gif)',
     })
     arr[4]=true;
   }
@@ -152,6 +171,7 @@ $('.correct li:nth-child(6)').click(function(){
       title: ""+getWish(count),
       text : "stars :"+count + "/ " + 7,
       timer : '9000',
+      background: 'url(./img/s5.jpg)',
     })
     arr[5]=true;
   }
@@ -168,6 +188,8 @@ $('.correct li:nth-child(7)').click(function(){
         title: ""+getWish(count),
         text : "stars :"+count + "/ " + 7,
         timer : '9000',
+        background: 'url(./img/heart.gif) ',
+        backdrop: 'url(./img/thanks2.gif) no-repeat right top ',
       })
       arr[6]=true;
     }
@@ -197,21 +219,16 @@ $('.incorrect li:nth-child(7)').click(function(){
 })
 });
 
- ////////////////// 
+ //////////////////
 }
 
 
 function hello(){
   Swal.fire({
-  title: 'Gửi đến thầy cô kính mến ! ',
-  text: "Nhân ngày nhà giáo Việt Nam, chúc tất cả các thầy cô giáo sức khỏe, hạnh phúc và thành công. Đặc biệt chúc thầy cô đang đọc tin nhắn này ngày nhà giáo thật vui, thật thành công, mọi lời chúc tốt đẹp nhất. Và kính chúc các thầy cô vì đã và đang cố gắng hết mình cho thế hệ trẻ hôm nay.",
-  showCancelButton: true,
-  showCancelButton : true,
-  showDenyButton : true,
-  confirmButtonText :"Tiếp tục",
-  denyButtonText : "Lùi lại",
-  cancelButtonText : "Hủy",
-  background: '#66FFCC',
+  title: '<span style="font-size:35px ;color:#009966; font-style:italic; ">Xin chào mọi người  !\nNhân ngày nhà giáo Việt Nam, em có món quà nho nhỏ gửi đến thầy cô</span> ',
+  timer: '8500',
+  imageUrl: './img/flower.gif',
+  background: '#6699FF',
 }).then(function(){
   $('.content').show(200);
 })
@@ -292,48 +309,48 @@ function incorrect_star(){
 }
 function auto()
 {
-  var s = 4000;
-  setTimeout(function(){
-    $('.correct li:nth-child(1)').click();
-}, 1000);
-setTimeout(function(){
-  $('.correct li:nth-child(2)').click();
-}, s*2);
-setTimeout(function(){
-  $('.correct li:nth-child(3)').click();
-}, s*3);
-setTimeout(function(){
-  $('.correct li:nth-child(4)').click();
-}, s*4);
-setTimeout(function(){
-  $('.correct li:nth-child(5)').click();
-}, s*5);
-setTimeout(function(){
-  $('.correct li:nth-child(6)').click();
-}, s*6);
-setTimeout(function(){
-  $('.correct li:nth-child(7)').click();
-}, s*7);
-
-
+  var s = 6000;
+  count = 0 ; // reset to zero
+  arr = [false,false,false,false,false,false,false]; // reset to zero
+    setTimeout(function(){
+      $('.correct li:nth-child(1)').click();
+  }, 1000);
+    setTimeout(function(){
+      $('.correct li:nth-child(2)').click();
+    }, s*2);
+    setTimeout(function(){
+      $('.correct li:nth-child(3)').click();
+    }, s*3);
+    setTimeout(function(){
+      $('.correct li:nth-child(4)').click();
+    }, s*4);
+    setTimeout(function(){
+      $('.correct li:nth-child(5)').click();
+    }, s*5);
+    setTimeout(function(){
+      $('.correct li:nth-child(6)').click();
+    }, s*6);
+    setTimeout(function(){
+      $('.correct li:nth-child(7)').click();
+    }, s*7);
 }
 function goodbye(){
   Swal.fire({
     customClass: {
       popup: 'border-radius-10'
     },
-    title:'<span style="color:#333333 ; font-family: Pacifico ; font-size:50px "> Cám ơn thầy cô đã ghé thăm ! <span> \nXin gửi đến các thầy , cô 1 bài hát.... ',
+    title:'<span style="color:#333333 ; font-family: Pacifico ; font-size:125% "> Cám ơn thầy cô đã ghé thăm ! <span> \nXin gửi đến các thầy , cô 1 bài hát.... ',
     timer: '4200',
     imageUrl: './img/goodbye.jpg',
     background: '#66FF33',
     confirmButtonText: '<3',
     confirmButtonColor: '#FF3333',
-    width: '70rem',
-    imageWidth: '600px',
-    imageHeight: '370px',
+    width: '85%',
+    imageWidth: '400px',
+    imageHeight: '280px',
   });
   setTimeout(function(){
-    window.location.href = 'https://youtu.be/PwuJp0nFb0M?t=87';
+    window.location.href = 'https://youtu.be/PwuJp0nFb0M';
   },7500);
  
 }
