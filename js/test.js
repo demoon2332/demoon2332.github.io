@@ -188,7 +188,7 @@ $('.correct li:nth-child(7)').click(function(){
         title: ""+getWish(count),
         text : "stars :"+count + "/ " + 7,
         timer : '9000',
-        background: 'url(./img/heart.gif) ',
+        background: 'url(./img/background.jpg) ',
         backdrop: 'url(./img/thanks2.gif) no-repeat right top ',
       })
       arr[6]=true;
