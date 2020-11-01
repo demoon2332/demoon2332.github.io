@@ -18,7 +18,7 @@ header h2{
 .sky {
 	background: linear-gradient(to top, hsl(187, 87%, 59%) 0%, #fd83f3 100%);
 	width: 100%;
-	height: 100vh;
+	height: 120vh;
 }
 .correct{
 	background-image: url(../img/star_correct.png) !important;
