@@ -62,9 +62,10 @@ Swal.fire({
   if(result.isDenied)  {
     //Swal.fire('Saved!', '', 'success')
     Swal.fire({
-      title: '<span style="color:#FF9933 ; font-family: Pacifico ; font-size:50px ">Sao sẽ được bắt tự động !',
+      showConfirmButton: false,
+      title: '<span style="color:#FF9933 ; font-family: Pacifico ; font-size:60px ">Sao sẽ được bắt tự động !',
       timer: '3500',
-      background: ' transparent ',
+      background: ' url(./img/bling.gif)',
       showClass:{
         popup: 'animate__animated animate__rubberBand'
       },
@@ -72,10 +73,10 @@ Swal.fire({
         popup : 'animate__animated animate__fadeOutRight'
       },
       backdrop: `
-    rgba(0,0,123,0.4)
-    left top
-    no-repeat
-    url("./img/rainbow_cat.gif")
+        rgba(2,2,123,0.55)
+        url(./img/end_backdrop.gif)
+        no-repeat
+    
     `
     });
     setTimeout(auto,3500);
@@ -101,7 +102,7 @@ $('.correct li:nth-child(1)').click(function(){
       Swal.fire({
         title: ""+getWish(count),
         text : "stars :"+count + "/ " + 7,
-        timer: '6500',
+        timer: '5200',
         background: 'url(img/background2.jpg)',
         showClass:{
           popup: 'animate__animated animate__backInDown'
@@ -128,7 +129,7 @@ $('.correct li:nth-child(2)').click(function(){
       Swal.fire({
         title: ""+getWish(count),
         text : "stars :"+count + "/ " + 7,
-        timer : '6500',
+        timer : '5200',
         background:'url(img/dreamcatcher.jpg)',
         backdrop: 'url(img/cutestar.gif)',
         showClass: {
@@ -152,7 +153,7 @@ $('.correct li:nth-child(3)').click(function(){
       Swal.fire({
         title: ""+getWish(count),
         text :"stars :"+ count + "/ " + 7,
-        timer : '6500',
+        timer : '5200',
         background: 'url(img/s2.jpg)',
         backdrop :'url(img/rise.gif)',
         showClass: {
@@ -177,9 +178,9 @@ $('.correct li:nth-child(4)').click(function(){
       Swal.fire({
         title: ""+getWish(count),
         text : "stars :"+count + "/ " + 7,
-        timer : '6500',
+        timer : '5200',
         background: 'url(./img/skygate.png)',
-        backdrop: 'url(img/daynight.gif)',
+        backdrop: 'url(img/japan.jpg) ',
         showClass: {
           popup: 'animate__animated animate__backInDown'
         },
@@ -201,9 +202,9 @@ $('.correct li:nth-child(5)').click(function(){
     Swal.fire({
       title: ""+getWish(count),
       text : "stars :"+count + "/ " + 7,
-      timer : '6500',
-      background: 'url(./img/s4.jpg)',
-      backdrop: 'url(img/falling.gif)',
+      timer : '5200',
+      background: 'rgba(1,1,123,0.4)',
+      backdrop: 'url(img/s4.jpg)',
       showClass: {
         popup: 'animate__animated animate__bounceInLeft'
       },
@@ -225,8 +226,9 @@ $('.correct li:nth-child(6)').click(function(){
     Swal.fire({
       title: ""+getWish(count),
       text : "stars :"+count + "/ " + 7,
-      timer : '6500',
-      background: 'url(./img/s5.jpg)',
+      timer : '5200',
+      background:'rgba(1,3,123,0.4)',
+      backdrop : 'url(./img/s5.jpg)',
       showClass: {
         popup: 'animate__animated animate__bounceInLeft'
       },
@@ -248,7 +250,7 @@ if(arr[6]==false)
     Swal.fire({
       title: ""+getWish(count),
       text : "stars :"+count + "/ " + 7,
-      timer : '6200',
+      timer : '5500',
       background: 'url(./img/galaxy.gif) ',
       backdrop: 'rgba(156, 39, 176, 0.57) url(./img/thanks2.gif) no-repeat right top ',
       showClass: {
@@ -309,6 +311,9 @@ function hello(){
       showClass: {
         popup: 'animate__animated animate__zoomIn'
       },
+      hideClass: {
+        popup : 'animate__animated animate__fadeOutDown'
+      },
     }).then(function(){
       $('.content').show(2000);
     });
@@ -342,7 +347,6 @@ function mess()
             background: '#FF9999',
             backdrop: `
               rgba(43, 165, 137, 0.45)
-              url("img/rainbow_cat.gif")
               bottom left
               no-repeat
             `
@@ -391,7 +395,7 @@ function incorrect_star(){
 }
 function auto()
 {
-  var s = 6000;
+  var s = 6200;
   count = 0 ; // reset to zero
   arr = [false,false,false,false,false,false,false]; // reset to zero
     setTimeout(function(){
