@@ -452,6 +452,7 @@ function goodbye(){
 }
 function rule(){
   Swal.fire({
+    showConfirmButton: false,
     title: '<span style="color:#333333 ; font-family: Pacifico ; font-size:35px "> ~ Rules: ~\n<img src="./img/rule.png" width= 280px height= 180px></img><img src="./img/rule2.png" width= 280px height= 150px></img></span> ',
     timer: 7000,
     width: 500,
