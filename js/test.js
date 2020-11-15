@@ -103,7 +103,8 @@ $('.correct li:nth-child(1)').click(function(){
         title: ""+getWish(count),
         text : "stars :"+count + "/ " + 7,
         timer: '5200',
-        background: 'url(img/background2.jpg)',
+        background: 'url(./img/background2.jpg)',
+        backdrop:'url(./img/background1.png) no-repeat',
         showClass:{
           popup: 'animate__animated animate__backInDown'
         },
