@@ -64,7 +64,7 @@ Swal.fire({
     Swal.fire({
       showConfirmButton: false,
       title: '<span style="color:#FF9933 ; font-family: Pacifico ; font-size:60px ">Sao sẽ được bắt tự động !',
-      timer: '3500',
+      timer: '5000',
       background: ' url(./img/bling.gif)',
       showClass:{
         popup: 'animate__animated animate__rubberBand'
