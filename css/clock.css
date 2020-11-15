@@ -5,4 +5,19 @@
 	font-style: italic;
 	font-size: 150%;
 	color:rgb(253, 25, 56);
+	animation: time 1s infinite linear ;
+	
+}
+@-webkit-keyframes time {
+	0%, 40%, 100% { -webkit-transform: scaleX(0.9) }  
+	20% { -webkit-transform: scaleX(1.0) }
+}
+@keyframes time {
+	0%, 40%, 100% { 
+	transform: scaleX(0.9);
+	-webkit-transform: scaleX(0.9);
+	}  20% { 
+	transform: scaleX(1.0);
+	-webkit-transform: scaleX(1.0);
+	}
 }

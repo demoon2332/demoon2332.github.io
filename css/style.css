@@ -1,14 +1,15 @@
-.content{
-	color:  #8A2BE2;
+.content{	
 	position: center;
 	
 }
 header h2{
+	color:  #8A2BE2;
 	font-family: 'Pacifico';
 	font-size: 65px;	
 	text-align:  center;
 	text-shadow: 0 0 6px #fff;
 	opacity: 2;
+	animation: word 4s infinite linear;
 }
 *{
 	margin: 0;
@@ -271,24 +272,8 @@ li button{
 	height: 70px;
 	animation-delay: 2s;
 }
-@keyframes animate {
-	0% {
-		transform: translateY(0) rotate(0deg);
-		opacity: 1;
-	}
-	100% {
-		transform: translateY(-800px) rotate(360deg);
-		opacity: 0;
-	}
-}
-@keyframes spin {
-	from {
-		transform: rotate(0deg);
-	  }
-	  to {
-		transform: rotate(360deg);
-	  }
-}
+
+
 .start button{
 	font-family: 'Pacifico';
 	text-align: center;
@@ -332,5 +317,42 @@ button:hover{
 	display: flex;
 	right: 0;
 	align-items: center;
+}
+@keyframes animate {
+	0% {
+		transform: translateY(0) rotate(0deg);
+		opacity: 1;
+	}
+	100% {
+		transform: translateY(-800px) rotate(360deg);
+		opacity: 0;
+	}
+}
+@keyframes spin {
+	from {
+		transform: rotate(0deg);
+	  }
+	  to {
+		transform: rotate(360deg);
+	  }
+}
+@keyframes word {
+	100%{
+		color : #BA55D3;
+	}
+	80%{
+		color :  #E066FF;
+		text-shadow: 5px 5px 10px rgb(33, 204, 247);
+	}
+	60% { 
+		color: #D15FEE ;
+		
+	}
+	40% {
+		color :  #B452CD ; 
+	}
+	20% { 
+		color: #7A378B; 
+	}
 }
 
