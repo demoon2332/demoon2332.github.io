@@ -333,7 +333,7 @@ function goodbye(){
     imageHeight: '370px',
   });
   setTimeout(function(){
-    window.location.href = 'https://youtu.be/PwuJp0nFb0M?t=87';
+    window.location.href = 'https://www.youtube.com/watch?v=J5HhHJXeR4Y';
   },7500);
  
 }
